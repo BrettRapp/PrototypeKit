@@ -67,7 +67,7 @@ class CameraViewController: NSViewController {
             self.captureSession.commitConfiguration()
         }
         
-        guard let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
+        guard let videoDevice = AVCaptureDevice.default(.continuityCamera,
                                                         for: .video,
                                                         position: .back) else { return }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
