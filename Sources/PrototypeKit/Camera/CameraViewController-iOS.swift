@@ -105,7 +105,7 @@ class CameraViewController: UIViewController {
             self.captureSession.commitConfiguration()
         }
         
-        guard let videoDevice = AVCaptureDevice.default(.builtInTripleCamera,
+        guard let videoDevice = AVCaptureDevice.default(.continuityCamera,
                                                         for: .video,
                                                         position: cameraPosition)
         else { return }
